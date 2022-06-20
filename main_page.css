@@ -1,0 +1,394 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    font-family: 'IBM Plex Sans KR';
+}
+
+main {
+    height: 75%;
+    width: 100%;
+}
+
+main > img {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+    display: none;
+}
+
+#place_name {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    color: white;
+    z-index: 2;
+}
+
+.changed_img0 {
+    display: block;
+}
+
+#sidebar {
+    position: relative;
+    width: 0px;
+    height: 100%;
+}
+
+#main_text {
+    width: 31%;
+    position: absolute;
+    text-align: center;
+    left: 33%;
+    top: 24%;
+    font-size: 240%;
+    color: rgb(253, 252, 252);
+    text-shadow: -1px 0px rgba(0, 0, 0, 0.363), 0px 1.5px rgba(0, 0, 0, 0.308), 2.5px 0px black, 0px -1px black;
+    font-family: 'Gaegu';
+}
+
+#main_text:hover {
+    cursor: pointer;
+}
+
+#go_trip {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: rgb(255, 255, 255);
+    top: 45%;
+    left: 51%;
+    text-align: center;
+    font-size: 110%;
+    transition: 1s ease;
+    line-height: 210%;
+}
+
+#go_trip:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+#go_trip img {
+    margin: 0px;
+    padding: 0px;
+    width: 6%;
+    height: 35%;
+    margin-left: 2px;
+    animation: horizontal ease-in-out 0.7s infinite;
+}
+
+#explore {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: rgb(255, 255, 255);
+    top: 45%;
+    left: 37%;
+    text-align: center;
+    font-size: 110%;
+    transition: 1s ease;
+    line-height: 210%;
+}
+
+#explore:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+#explore img {
+    margin: 0px;
+    padding: 0px;
+    width: 6%;
+    height: 35%;
+    margin-left: 2px;
+    animation: horizontal ease-in-out 0.7s infinite;
+}
+
+@keyframes horizontal {
+    0% {
+        transform: translateX(1px);
+    }
+    50% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(1px);
+    }
+}
+
+main .left_arrow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 3%;
+    height: 70%;
+    margin: 0px;
+    opacity: 0;
+    animation: fade_arrow 20s ease;
+}
+
+main .left_arrow img {
+    width: 50%;
+    height: 6%;
+    margin-top: 280px;
+    margin-left: 14px;
+}
+
+main .left_arrow:hover {
+    cursor: pointer;
+    animation: arrow 0.5s ease-out forwards;
+}
+
+main .right_arrow {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 3%;
+    height: 70%;
+    margin: 0px;
+    opacity: 0;
+    animation: fade_arrow 20s ease;
+}
+
+main .right_arrow img {
+    width: 50%;
+    height: 6%;
+    margin-top: 280px;
+    margin-right: 14px;
+}
+
+@keyframes fade_arrow {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+main .right_arrow:hover {
+    cursor: pointer;
+    animation: arrow 0.5s ease-out forwards;
+}
+
+@keyframes arrow {
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#main_text span {
+    margin: 0px;
+    font-size: 290%;
+    font-weight: bold;
+    animation: wave 1.5s ease;
+}
+
+.main_text1, .main_text2, main_text3 {
+    float: left;
+}
+
+.main_text5 {
+    float: right;
+}
+
+@keyframes wave {
+    5% {
+        opacity: 0.2;
+        color: blue;
+    }
+    35% {
+        color: skyblue;
+        opacity: 0.5;
+    }
+
+    60% {
+        color: white;
+        opacity: 0.7;
+    }
+
+    90% {
+        color: rgba(151, 154, 229, 0.836);
+        opacity: 1;
+    }
+}
+
+#main_text span:nth-child(1) {
+    animation-delay: .07s;
+}
+
+#main_text span:nth-child(2) {
+    animation-delay: .14s;
+}
+
+  #main_text span:nth-child(3) {
+    animation-delay: .21s;
+}
+
+#main_text span:nth-child(4) {
+    animation-delay: .28s;
+}
+
+#main_text span:nth-child(5) {
+    animation-delay: .38s;
+}
+
+.slide_num {
+    position: absolute;
+    right: 1%;
+    top: 68%;
+    width: 3%;
+    height: 5%;
+}
+
+.slide_num span {
+    font-size: 130%;
+    color: rgb(245, 245, 245);
+}
+
+nav {
+    height: 25%;
+    width: 100%;
+}
+
+nav div {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.part1_nature {
+    position: relative;
+    text-align: center;
+    line-height: 450%;
+}
+
+.part1_nature img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.part1_nature span {
+    position: absolute;
+    left: 40%;
+    line-height: 580%;
+    font-size: 200%;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.part2_history {
+    position: relative;
+    text-align: center;
+    line-height: 450%;
+}
+
+.part2_history img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.part2_history span {
+    position: absolute;
+    left: 40%;
+    line-height: 580%;
+    font-size: 200%;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.part3_cafe {
+    position: relative;
+    text-align: center;
+    line-height: 450%;
+}
+
+.part3_cafe img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.part3_cafe span {
+    position: absolute;
+    left: 40%;
+    line-height: 580%;
+    font-size: 200%;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.part4_activity {
+    position: relative;
+    text-align: center;
+    line-height: 450%;
+}
+
+.part4_activity img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.part4_activity span {
+    position: absolute;
+    left: 40%;
+    line-height: 580%;
+    font-size: 200%;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.part5_play {
+    position: relative;
+    text-align: center;
+    line-height: 450%;
+}
+
+.part5_play img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.part5_play span {
+    position: absolute;
+    left: 40%;
+    line-height: 580%;
+    font-size: 200%;
+    color: white;
+    font-weight: bolder;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>제이드가든</title>
+        <link rel="stylesheet" href="next.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            function change1() {
+                var p = document.getElementById("change");
+                p.innerHTML="📍강원 춘천시 남산면 햇골길 80 제이드가든수목원"+ 
+                "<br>" + "⏰매일 09:00 - 18:00" +
+                "<br>"+ "💰성인: ₩10,000"+ "<br>" +
+                "💰우대: ₩7,000 (중-고등학생, 장애인, 유공자)"  +"<br>" + 
+                "💰37개월 미만: 무료";
+            }
+
+            function change2() {
+                var p = document.getElementById("change");
+                p.innerHTML="순백의 아름다움을 지닌 새하얀 유럽정원, 4계절의 정원은 물론 광고, 드라마, 화보촬영지로도 많은 사랑을 받고 있으며, 계절마다 새로운 3천 9백여 종류의 꽃과 나무가 있는 명품 수목원이다. 강렬한 원색보다는 수수하고 은은한 멋을 뽐내는 화훼류 위주로 채워져 있고, 계곡의 우거진 산림 그대로의 멋을 살린 것이 특징이라 할 수 있다. 뿐만 아니라 식물에 관심이 많은 예비 가드너들을 위한 가드너 양성 프로그램과 학생들을 위한 다양한 프로그램도 계획하고 있다. 수목원을 둘러보다 보면 경사가 가파른 곳이 제법 있으므로, 구두보다는 편한 신발을 신고 방문하는 것을 추천한다.";
+                
+            }
+
+            function select1() {
+                var p = document.getElementById("menu2");
+                var s = document.getElementById("menu1");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+
+            function select2() {
+                var p = document.getElementById("menu1");
+                var s = document.getElementById("menu2");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+            
+            var index = 0;
+            $(document).ready(function() {
+               setInterval(next, 4000);
+            });
+
+            function next() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index + 1) % 4;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+
+            function previous() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index <= 0) ? 3 : index - 1;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_text").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "87%"
+                    });
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $(".menu_contents").hover(function() {
+                    $(".menu_contents").width("87%");
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $("main").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "0%"
+                    });
+                    $(".menu_contents div").css("display", "none");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_contents > div > a").hover(function() {
+                    $(this).find("img").css("filter", "brightness(50%)")
+                }, function() {
+                    $(this).find("img").css("filter", "brightness(100%)")
+                });
+
+                $(".menu_main > a, .menu_trip > a").hover(function() {
+                    $(this).css("filter", "brightness(70%)")
+                }, function() {
+                    $(this).css("filter", "brightness(100%)")
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img class="changed_img0" src="media/제이드가든1.jpg">
+        <img class="changed_img1" src="media/제이드가든2.jpg">
+        <img class="changed_img2" src="media/제이드가든3.jpg">
+        <img class="changed_img3" src="media/제이드가든4.jpg">
+        <div class="slide_num">
+            <span id="changed_num">1</span>
+            <span>/</span>
+            <span>4</span>
+        </div>
+        <main>
+            <div class="go_homepage" title="홈페이지로 이동">
+                <a href="https://www.instagram.com/jadegarden_chuncheon/" target="blank">
+                    <span class="title">제이드가든</span>
+                </a>
+            </div>
+            <div class="phrase">
+                숲속에서 만나는 작은 유럽
+            </div>
+            <div class="menu_bar">
+                <div class="menu_contents">
+                    <div class="menu_main">
+                        <a href="main_page.html">
+                            로맨틱 춘천
+                        </a>
+                    </div>
+                    <div class="menu_nature">
+                        <a href="1_nami.html">
+                            <div>
+                                <img src="media/남이섬1.jpg">
+                                <span>남이섬</span>
+                            </div>
+                        </a>
+                        <a href="2_samak.html">
+                            <div>
+                                <img src="media/삼악산1.jpg">
+                                <span>삼악산</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_history">
+                        <a href="3_kim_youjeong.html">
+                            <div>
+                                <img src="media/김유정문학촌1.jpg">
+                                <span>김유정문학촌</span>
+                            </div>
+                        </a>
+                        <a href="4_chuncheon_museum.html">
+                            <div>
+                                <img src="media/국립춘천박물관1.jpg">
+                                <span>국립춘천박물관</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_cafe">
+                        <a href="5_santorini.html">
+                            <div>
+                                <img src="media/산토리니1.jpg">
+                                <span>산토리니</span>
+                            </div>
+                        </a>
+                        <a href="6_potato.html">
+                            <div>
+                                <img src="media/감자밭7.jpg">
+                                <span>감자밭</span>
+                            </div>
+                        </a>
+                    </div>  
+                    <div class="menu_activity">
+                        <a href="7_jadegarden.html">
+                            <div>
+                                <img src="media/제이드가든1.jpg">
+                                <span>제이드가든</span>
+                            </div>
+                        </a>
+                        <a href="8_mullegil.html">
+                            <div>
+                                <img src="media/물레길4.jpg">
+                                <span>물레길</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_play">
+                        <a href="9_legoland.html">
+                            <div>
+                                <img src="media/레고랜드1.jpg">
+                                <span>레고랜드</span>
+                            </div>
+                        </a>
+                        <a href="10_kangchon.html">
+                            <div>
+                                <img src="media/레일파크1.jpg">
+                                <span>강촌레일파크</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_trip">
+                        <a href="select.html">
+                            > &nbsp;여행하러 가기
+                        </a>
+                    </div>
+                </div>
+                <div class="menu_text">
+                    바로가기
+                    <img src="media/바로가기.png">
+                </div>
+            </div>
+            <div class="left_arrow" onclick="previous();">
+                <img src="media/left_arrow.png">
+            </div>
+            <div class="right_arrow" onclick="next();">
+                <img src="media/right_arrow.png">
+            </div>
+        </main>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li id="menu1" onclick="change2(); select2()">소개</li>
+                    <li id="menu2" onclick="change1(); select1()">정보</li>
+                </ul>
+            </div>
+            <div class="contents">
+                <p id="change">순백의 아름다움을 지닌 새하얀 유럽정원, 4계절의 정원은 물론 광고, 드라마, 화보촬영지로도 많은 사랑을 받고 있으며, 계절마다 새로운 3천 9백여 종류의 꽃과 나무가 있는 명품 수목원이다. 강렬한 원색보다는 수수하고 은은한 멋을 뽐내는 화훼류 위주로 채워져 있고, 계곡의 우거진 산림 그대로의 멋을 살린 것이 특징이라 할 수 있다. 
+                    뿐만 아니라 식물에 관심이 많은 예비 가드너들을 위한 가드너 양성 프로그램과 학생들을 위한 다양한 프로그램도 계획하고 있다. 
+                    수목원을 둘러보다 보면 경사가 가파른 곳이 제법 있으므로, 구두보다는 편한 신발을 신고 방문하는 것을 추천한다.
+                </p>
+            </div>
+            <a href="8_mullegil.html">
+                <div id="next_trip">
+                    <span>다음 장소로</span>
+                    <img src="media/화살표.png">
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>

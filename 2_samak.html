@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>삼악산</title>
+        <link rel="stylesheet" href="previous.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            function select1() {
+                var p = document.getElementById("menu2");
+                var s = document.getElementById("menu1");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+
+            function select2() {
+                var p = document.getElementById("menu1");
+                var s = document.getElementById("menu2");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+
+            function change1() {
+                var p = document.getElementById("change");
+                p.innerHTML="📍강원 춘천시 서면 경춘로 1401-25(삼악산), 📍강원 춘천시 스포츠타운길 245(케이블카)"+ 
+                "<br>" + "⏰매일 09:00 - 20:00" +
+                "<br> "+ "💰대인: ₩23,000"+ 
+                "<br> "+ "💰소인: ₩17,000 (36개월 이상 ~ 초등학생)"+
+                "<br> "+ "💰크리스탈 캐빈 이용시 ₩5,000 추가";
+            }
+
+            function change2() {
+                var p = document.getElementById("change");
+                p.innerHTML="높이는 654m이고, 주봉(主峰)은 용화봉이다. 서울특별시에서 북쪽으로 80km, 춘천시에서 남서쪽으로 10km 떨어진 지점에 있다. 경춘국도의 의암댐 바로 서쪽에 있으며, 북한강으로 흘러드는 강변을 끼고 남쪽으로 검봉산·봉화산이 있다. 주봉이 용화봉과 함께 청운봉(546m)·등선봉(632m) 3개이므로 삼악산이라는 이름이 붙었으며, 3개 봉우리에서 뻗어내린 능선이 암봉을 이룬다. 명소 가운데 등선폭포(登仙瀑布, 또는 경주폭포)는 높이 15m의 제1폭포 외에 제2·3 폭포가 더 있고, 그 외에 등선·비선·승학·백련·주렴폭포 등 크고 작은 폭포가 이어진다. 정상에서는 의암호와 북한강이 내려다보인다."
+                    +"<br>"+"삼악산을 연결한 삼악산 호수 케이블카는 삼천동에서 의암호를 가로질러 삼악산을 연결하는 3.61km의 국내 최장 케이블카이다.";
+            }
+            
+            var index = 0;
+            $(document).ready(function() {
+               setInterval(next, 4000);
+            });
+
+            function next() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index + 1) % 4;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+
+            function previous() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index <= 0) ? 3 : index - 1;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_text").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "87%"
+                    });
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $(".menu_contents").hover(function() {
+                    $(".menu_contents").width("87%");
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $("main").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "0%"
+                    });
+                    $(".menu_contents div").css("display", "none");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_contents > div > a").hover(function() {
+                    $(this).find("img").css("filter", "brightness(50%)")
+                }, function() {
+                    $(this).find("img").css("filter", "brightness(100%)")
+                });
+
+                $(".menu_main > a, .menu_trip > a").hover(function() {
+                    $(this).css("filter", "brightness(70%)")
+                }, function() {
+                    $(this).css("filter", "brightness(100%)")
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img class="changed_img0" src="media/삼악산1.jpg">
+        <img class="changed_img1" src="media/삼악산2.jpg">
+        <img class="changed_img2" src="media/삼악산3.jpg">
+        <img class="changed_img3" src="media/삼악산4.jpg">
+        <div class="slide_num">
+            <span id="changed_num">1</span>
+            <span>/</span>
+            <span>4</span>
+        </div>
+        <main>
+            <div class="title">
+                삼악산
+            </div>
+            <div class="phrase">
+                춘천의 자연 그대로를 담다
+            </div>
+            </div>
+            <div class="menu_bar">
+                <div class="menu_contents">
+                    <div class="menu_main">
+                        <a href="main_page.html">
+                            로맨틱 춘천
+                        </a>
+                    </div>
+                    <div class="menu_nature">
+                        <a href="1_nami.html">
+                            <div>
+                                <img src="media/남이섬1.jpg">
+                                <span>남이섬</span>
+                            </div>
+                        </a>
+                        <a href="2_samak.html">
+                            <div>
+                                <img src="media/삼악산1.jpg">
+                                <span>삼악산</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_history">
+                        <a href="3_kim_youjeong.html">
+                            <div>
+                                <img src="media/김유정문학촌1.jpg">
+                                <span>김유정문학촌</span>
+                            </div>
+                        </a>
+                        <a href="4_chuncheon_museum.html">
+                            <div>
+                                <img src="media/국립춘천박물관1.jpg">
+                                <span>국립춘천박물관</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_cafe">
+                        <a href="5_santorini.html">
+                            <div>
+                                <img src="media/산토리니1.jpg">
+                                <span>산토리니</span>
+                            </div>
+                        </a>
+                        <a href="6_potato.html">
+                            <div>
+                                <img src="media/감자밭7.jpg">
+                                <span>감자밭</span>
+                            </div>
+                        </a>
+                    </div>  
+                    <div class="menu_activity">
+                        <a href="7_jadegarden.html">
+                            <div>
+                                <img src="media/제이드가든1.jpg">
+                                <span>제이드가든</span>
+                            </div>
+                        </a>
+                        <a href="8_mullegil.html">
+                            <div>
+                                <img src="media/물레길4.jpg">
+                                <span>물레길</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_play">
+                        <a href="9_legoland.html">
+                            <div>
+                                <img src="media/레고랜드1.jpg">
+                                <span>레고랜드</span>
+                            </div>
+                        </a>
+                        <a href="10_kangchon.html">
+                            <div>
+                                <img src="media/레일파크1.jpg">
+                                <span>강촌레일파크</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_trip">
+                        <a href="select.html">
+                            > &nbsp;여행하러 가기
+                        </a>
+                    </div>
+                </div>
+                <div class="menu_text">
+                    바로가기
+                    <img src="media/바로가기.png">
+                </div>
+            </div>
+            <div class="left_arrow" onclick="previous();">
+                <img src="media/left_arrow.png">
+            </div>
+            <div class="right_arrow" onclick="next();">
+                <img src="media/right_arrow.png">
+            </div>
+        </main>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li id="menu1" onclick="change2(); select2()">소개</li>
+                    <li id="menu2" onclick="change1(); select1()">정보</li>
+                </ul>
+            </div>
+            <div class="contents">
+                <p id="change">높이는 654m이고, 주봉(主峰)은 용화봉이다. 서울특별시에서 북쪽으로 80km, 춘천시에서 남서쪽으로 10km 떨어진 지점에 있다. 경춘국도의 의암댐 바로 서쪽에 있으며, 북한강으로 흘러드는 강변을 끼고 남쪽으로 검봉산·봉화산이 있다. 주봉이 용화봉과 함께 청운봉(546m)·등선봉(632m) 3개이므로 삼악산이라는 이름이 붙었으며, 3개 봉우리에서 뻗어내린 능선이 암봉을 이룬다. 명소 가운데 등선폭포(登仙瀑布, 또는 경주폭포)는 높이 15m의 제1폭포 외에 제2·3 폭포가 더 있고, 그 외에 등선·비선·승학·백련·주렴폭포 등 크고 작은 폭포가 이어진다. 정상에서는 의암호와 북한강이 내려다보인다.
+                    <br>삼악산을 연결한 삼악산 호수 케이블카는 삼천동에서 의암호를 가로질러 삼악산을 연결하는 3.61km의 국내 최장 케이블카이다.</p>
+            </div>
+            <a href="1_nami.html">
+                <div id="next_trip">
+                    <img src="media/왼쪽화살표.png">
+                    <span>이전 장소로</span>
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>

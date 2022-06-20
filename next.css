@@ -1,0 +1,347 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Sans KR';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    color: white;
+    position: relative;
+}
+
+body > img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-size: cover;
+    top: 0%;
+    position: absolute;
+    display: none;
+}
+
+.changed_img0 {
+    display: block;
+}
+
+main {
+    width: 100%;
+    height: 50%;
+    font-size: 20px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.title {
+    left: 9%;
+    top: 12%;
+    position: absolute;
+    color: white;
+    font-size: 550%;
+    font-weight: bold;
+    text-shadow: -1px 0px rgba(0, 0, 0, 0.363), 0px 1.5px rgba(0, 0, 0, 0.308), 2.5px 0px black, 0px -1px black;
+    font-family: 'Gaegu';
+}
+
+.phrase {
+    left: 9%;
+    top: 35%;
+    position: absolute;
+    width: 80%;
+    height: 5%;
+    font-size: 40px;
+    font-family: 'Gamja Flower';
+}
+
+.menu_bar {
+    width: 20%;
+    height: 16%;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    z-index: 3;
+}
+
+.menu_text {
+    position: relative;
+    width: 13%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.600);
+    float: right;
+    line-height: 105%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans KR';
+    text-orientation: upright;
+    padding-top: 5px;
+}
+
+.menu_text img {
+    position: absolute;
+    width: 60%;
+    height: 16%;
+    left: 22%;
+    top: 75%;
+}
+
+.menu_text:hover {
+    cursor: default;
+}
+
+.menu_contents {
+    float: right;
+    height: 500%;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+.menu_contents > div {
+    margin: 0px;
+    height: 16%;
+    width: 100%;
+    padding: 0px;
+    display: none;
+}
+
+.menu_contents > div > a > div {
+    position: relative;
+    float: left;
+    width: 43%;
+    height: 80%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+
+.menu_contents img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    opacity: 0.9;
+}
+
+.menu_main {
+    position: relative;
+}
+
+.menu_contents span {
+    position: absolute;
+    font-size: 15px;
+    top: 33%;
+    margin: auto 10px;
+    line-height: 200%;
+    text-decoration-line: none;
+    color: white;
+}
+
+.menu_trip {
+    position: relative;
+}
+
+.menu_main a {
+    position: absolute;
+    font-family: 'Gaegu';
+    font-weight: normal;
+    font-size: 35px;
+    top: 28%;
+    left: 22%;
+    text-decoration-line: none;
+    color: white;
+}
+
+.menu_trip a {
+    position: absolute;
+    text-decoration-line: none;
+    color: white;
+    top: -9%;
+    right: 4%;
+    font-size: 70%;
+}
+
+nav {
+    width: 100%;
+    height: 50%;
+}
+
+.menu {
+    position: absolute;
+    left: 9%;
+    width: 12%;
+    height: 5%;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.600);
+    text-align: center;
+}
+
+.menu ul li {
+    list-style-type: none;
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: 200%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.contents {
+    background-color: rgba(0, 0, 0, 0.600);
+    position: absolute;
+    left: 9%;
+    bottom: 15%;
+    font-size: 20px;
+    width: 83%;
+    height: 30%;
+    line-height: 160%;
+}
+
+.contents p {
+    margin: 0%;
+    padding: 18px;
+}
+
+#menu1 {
+    font-weight: bold;
+}
+
+#menu2 {
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+#menu1:hover {
+    cursor: pointer;
+}
+
+#menu2:hover {
+    cursor: pointer;
+}
+
+main .left_arrow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5%;
+    height: 100%;
+    margin: 0px;
+    opacity: 0;
+    animation: fade_arrow 20s ease;
+}
+
+main .left_arrow:hover {
+    cursor: pointer;
+    animation: arrow 0.5s ease-out forwards;
+}
+
+main .right_arrow {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 5%;
+    height: 100%;
+    margin: 0px;
+    opacity: 0;
+    animation: fade_arrow 10s ease;
+}
+
+main .left_arrow img {
+    width: 30%;
+    height: 6%;
+    margin-top: 350px;
+    margin-left: 14px;
+}
+
+main .right_arrow img {
+    width: 30%;
+    height: 6%;
+    margin-top: 350px;
+    margin-left: 37px;
+}
+
+@keyframes fade_arrow {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+main .right_arrow:hover {
+    cursor: pointer;
+    animation: arrow 0.5s ease-out forwards;
+}
+
+@keyframes arrow {
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#next_trip {
+    position: absolute;
+    width: 9%;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: rgb(255, 255, 255);
+    top: 90%;
+    left: 45%;
+    font-size: 110%;
+    text-align: center;
+    transition: 1s ease;
+    line-height: 200%;
+}
+
+#next_trip:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+#next_trip span {
+    margin-right: 8px;
+}
+
+#next_trip img {
+    margin: 0px;
+    padding: 0px;
+    width: 6%;
+    height: 35%;
+    margin-top: 10px;
+    animation: horizontal ease-in-out 0.7s infinite;
+}
+
+@keyframes horizontal {
+    0% {
+        transform: translateX(1px);
+    }
+    50% {
+        transform: translateX(-1px);
+    }
+    100% {
+        transform: translateX(1px);
+    }
+}
+
+.slide_num {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 3%;
+    height: 5%;
+}
+
+.slide_num span {
+    font-size: 130%;
+    color: rgb(245, 245, 245);
+}

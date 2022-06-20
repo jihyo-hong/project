@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="phamplet.css">
+        <title>팜플렛</title>
+
+        <script>
+            function phamplet() {
+                var arr=[
+                    ['media/남이섬1.jpg','남이섬', '📍강원 춘천시 남산면 남이섬길', '⏰매일 08:00 - 21:00'],
+                    ['media/삼악산1.jpg', '삼악산', '📍강원 춘천시 서면 경춘로 1401-25(삼악산)', '⏰매일 09:00 - 20:00'],
+                    ['media/김유정문학촌1.jpg', '김유정문학촌', '📍강원 춘천시 신동면 김유정로 1430-14','⏰평일 09:30 - 18:00'],
+                    ['media/국립춘천박물관1.jpg','국립춘천박물관', '📍강원 춘천시 우석로 70 국립춘천박물관', '⏰평일, 공휴일 09:00 - 18:00'],
+                    ['media/산토리니1.jpg', '산토리니', '📍강원 춘천시 동면 순환대로 1154-97', '⏰매일 11:00 - 21:00'],
+                    ['media/감자밭7.jpg', '감자밭', '📍강원 춘천시 신북읍 신샘밭로 674','⏰매일 10:00 - 21:00'],
+                    ['media/제이드가든1.jpg', '제이드가든', '📍강원 춘천시 남산면 햇골길 80 제이드가든수목원', '⏰매일 09:00 - 18:00'],
+                    ['media/물레길4.jpg', '물레길', '📍강원 춘천시 스포츠타운길 113-1', '⏰매일 09:00 - 18:00'],
+                    ['media/레고랜드1.jpg', '레고랜드', '📍강원 춘천시 하중도길 128 레고랜드 코리아 리조트', '⏰매일 10:00 - 18:00'],
+                    ['media/레일파크1.jpg', '강촌레일파크', '📍강원 춘천시 신동면 김유정로 1383', '⏰매일 09:00 - 17:30']
+                ];
+                
+                var rplace1, rplace2, rplace3;
+
+                rplace1 = localStorage.getItem('place1');
+                rplace2 = localStorage.getItem('place2');
+                rplace3 = localStorage.getItem('place3');
+
+                var image = document.getElementsByClassName('image');
+                var phrase = document.getElementsByClassName('phrase');
+                var address = document.getElementsByClassName('address');
+                var time = document.getElementsByClassName('time');
+
+                document.getElementById("title").innerHTML = localStorage.getItem('title');
+                document.getElementById("date").innerHTML = localStorage.getItem('date');
+
+                image[0].src = arr[rplace1][0];
+                phrase[0].innerHTML = arr[rplace1][1];
+                address[0].innerHTML = arr[rplace1][2];
+                time[0].innerHTML = arr[rplace1][3];
+
+                image[1].src = arr[rplace2][0];
+                phrase[1].innerHTML = arr[rplace2][1]
+                address[1].innerHTML = arr[rplace2][2];
+                time[1].innerHTML = arr[rplace2][3];
+
+                image[2].src = arr[rplace3][0];
+                phrase[2].innerHTML = arr[rplace3][1]
+                address[2].innerHTML = arr[rplace3][2];
+                time[2].innerHTML = arr[rplace3][3];
+            }
+        </script>
+    </head>
+    <body onload = "phamplet()">  
+        <header>
+            <img src="media/포토.png">
+            <div id="title"></div>
+            <div id="date"></div>
+        </header>
+        <main>
+            <div class="place1">
+                <img src="" class="image">
+                <div class="phrase"></div>
+                <div class="address"></div>
+                <div class="time"> </div>
+            </div>
+            <div class="place2">
+                <img src="" class="image">
+                <div class="phrase"></div>
+                <div class="address"></div>
+                <div class="time"></div>
+            </div>
+            <div class="place3">
+                <img src="" class="image">
+                <div class="phrase"></div>
+                <div class="address"></div>
+                <div class="time"></div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>산토리니</title>
+        <link rel="stylesheet" href="next.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            function change1() {
+                var p = document.getElementById("change");
+                p.innerHTML="📍강원 춘천시 동면 순환대로 1154-97"+ 
+                "<br>" + "⏰매일 11:00 - 21:00" +
+                "<br> "+ "💰아메리카노: ₩5,900, 카페라떼: ₩6,500"+ "<br>" +
+                "💰바닐라라떼: ₩6,900, 카라멜 크림라떼: ₩7,000";
+            }
+
+            function change2() {
+                var p = document.getElementById("change");
+                p.innerHTML="";
+            }
+
+            function select1() {
+                var p = document.getElementById("menu2");
+                var s = document.getElementById("menu1");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+
+            function select2() {
+                var p = document.getElementById("menu1");
+                var s = document.getElementById("menu2");
+                p.style.fontWeight='bold';
+                s.style.fontWeight='normal';
+                p.style.backgroundColor='rgba(0, 0, 0, 0.000)';
+                s.style.backgroundColor='rgba(0, 0, 0, 0.500)';
+            }
+            
+            var index = 0;
+            $(document).ready(function() {
+               setInterval(next, 4000);
+            });
+
+            function next() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index + 1) % 4;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+
+            function previous() {
+                $(".changed_img" + index).fadeOut(800);
+                index = (index <= 0) ? 3 : index - 1;
+                $(".changed_img" + index).fadeIn(800);
+                $("#changed_num").text(index + 1);
+            }
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_text").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "87%"
+                    });
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $(".menu_contents").hover(function() {
+                    $(".menu_contents").width("87%");
+                    $(".menu_contents div").css("display", "block");
+                });
+
+                $("main").hover(function() {
+                    $(".menu_contents").animate({
+                        width: "0%"
+                    });
+                    $(".menu_contents div").css("display", "none");
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".menu_contents > div > a").hover(function() {
+                    $(this).find("img").css("filter", "brightness(50%)")
+                }, function() {
+                    $(this).find("img").css("filter", "brightness(100%)")
+                });
+
+                $(".menu_main > a, .menu_trip > a").hover(function() {
+                    $(this).css("filter", "brightness(70%)")
+                }, function() {
+                    $(this).css("filter", "brightness(100%)")
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img class="changed_img0" src="media/산토리니1.jpg">
+        <img class="changed_img1" src="media/산토리니2.jpg">
+        <img class="changed_img2" src="media/산토리니3.jpg">
+        <img class="changed_img3" src="media/산토리니4.jpg">
+        <div class="slide_num">
+            <span id="changed_num">1</span>
+            <span>/</span>
+            <span>4</span>
+        </div>
+        <main>
+            <div class="go_homepage" title="홈페이지로 이동">
+                <a href="https://www.instagram.com/ch_santorini/" target="blank">
+                    <span class="title">산토리니</span>
+                </a>
+            </div>
+            <div class="phrase">
+                춘천에서 만나 보는 그리스
+            </div>
+            <div class="menu_bar">
+                <div class="menu_contents">
+                    <div class="menu_main">
+                        <a href="main_page.html">
+                            로맨틱 춘천
+                        </a>
+                    </div>
+                    <div class="menu_nature">
+                        <a href="1_nami.html">
+                            <div>
+                                <img src="media/남이섬1.jpg">
+                                <span>남이섬</span>
+                            </div>
+                        </a>
+                        <a href="2_samak.html">
+                            <div>
+                                <img src="media/삼악산1.jpg">
+                                <span>삼악산</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_history">
+                        <a href="3_kim_youjeong.html">
+                            <div>
+                                <img src="media/김유정문학촌1.jpg">
+                                <span>김유정문학촌</span>
+                            </div>
+                        </a>
+                        <a href="4_chuncheon_museum.html">
+                            <div>
+                                <img src="media/국립춘천박물관1.jpg">
+                                <span>국립춘천박물관</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_cafe">
+                        <a href="5_santorini.html">
+                            <div>
+                                <img src="media/산토리니1.jpg">
+                                <span>산토리니</span>
+                            </div>
+                        </a>
+                        <a href="6_potato.html">
+                            <div>
+                                <img src="media/감자밭7.jpg">
+                                <span>감자밭</span>
+                            </div>
+                        </a>
+                    </div>  
+                    <div class="menu_activity">
+                        <a href="7_jadegarden.html">
+                            <div>
+                                <img src="media/제이드가든1.jpg">
+                                <span>제이드가든</span>
+                            </div>
+                        </a>
+                        <a href="8_mullegil.html">
+                            <div>
+                                <img src="media/물레길4.jpg">
+                                <span>물레길</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_play">
+                        <a href="9_legoland.html">
+                            <div>
+                                <img src="media/레고랜드1.jpg">
+                                <span>레고랜드</span>
+                            </div>
+                        </a>
+                        <a href="10_kangchon.html">
+                            <div>
+                                <img src="media/레일파크1.jpg">
+                                <span>강촌레일파크</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="menu_trip">
+                        <a href="select.html">
+                            > &nbsp;여행하러 가기
+                        </a>
+                    </div>
+                </div>
+                <div class="menu_text">
+                    바로가기
+                    <img src="media/바로가기.png">
+                </div>
+            </div>
+            <div class="left_arrow" onclick="previous();">
+                <img src="media/left_arrow.png">
+            </div>
+            <div class="right_arrow" onclick="next();">
+                <img src="media/right_arrow.png">
+            </div>
+        </main>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li id="menu1" onclick="change2(); select2()">소개</li>
+                    <li id="menu2" onclick="change1(); select1()">정보</li>
+                </ul>
+            </div>
+            <div class="contents">
+                <p id="change"></p>
+            </div>
+            <a href ="6_potato.html">
+                <div id="next_trip">
+                    <span>다음 장소로</span>
+                    <img src="media/화살표.png">
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>

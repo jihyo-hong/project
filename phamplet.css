@@ -1,0 +1,118 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Sans KR';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+    font-size: 150%;
+}
+
+header {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+header img {
+    position: absolute;
+    background-size:cover;
+    width: 60%;
+    height: 100%;
+}
+
+header #title {
+    text-shadow: -1px 0px rgba(0, 0, 0, 0.363), 0px 1.5px rgba(0, 0, 0, 0.308), 2.5px 0px black, 0px -1px black;
+    font-family: 'Gaegu';
+    position: absolute;
+    width: 30%;
+    height: 16%;
+    color: white;
+    text-align:center;
+    font-size: 380%;
+    top: 22%;
+    left: 2%;
+    font-weight: bold;
+}
+
+header #date {
+    text-shadow: -1px 0px rgba(0, 0, 0, 0.363), 0px 1px rgba(0, 0, 0, 0.308), 2px 0px black, 0px -1px black;
+    font-family: 'IBM Plex Sans KR';
+    position: absolute;
+    width: 23%;
+    height: 7%;
+    font-size: 130%;
+    text-align:center;
+    color:white;
+    top: 38%;
+    left: 5.5%;
+}
+
+main {
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.image {
+    background-size:cover;
+    width: 80%;
+    height: 40%;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+
+.phrase {
+    width: 70%;
+    height: 10%;
+    margin: auto 15%;
+    font-weight: bold;
+    line-height: 200%;
+    font-size: 110%;
+}
+
+.address {
+    width: 80%;
+    height: 15%;
+    margin: 6% 9%;
+    font-size: 85%;
+}
+
+.time {
+    width: 90%;
+    height: 10%;
+    margin: auto 5%;
+   font-size: 90%;
+}
+
+main .place1 {
+    position: absolute;
+    border-right: 2px dashed rgba(59, 30, 30, 0.555);
+    width: 22%;
+    height: 60%;
+    left: 33%;
+    top: 20%;
+}
+
+main .place2 {
+    position: absolute;
+    border-right: 2px dashed rgba(59, 30, 30, 0.555);
+    width: 22%;
+    height: 60%;
+    left: 55%;
+    top: 20%;
+}
+
+main .place3 {
+    position: absolute;
+    width: 22%;
+    height: 60%;
+    left: 77%;
+    top: 20%;
+}
+

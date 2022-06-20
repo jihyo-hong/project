@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>여행</title>
+        <link rel="stylesheet" href="main_page.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        var index = 0;
+        var arr=[["소양강 댐", "white"], ["서면 메밀꽃밭", "black"], ["청평사", "black"], ["소양강 상고대", "black"], ["소양강", "black"], ["구봉산 전망대", "white"], ["소양강 스카이워크", "white"]];
+        $(document).ready(function() {
+           setInterval(next, 4000);
+        });
+
+        function next() {
+            $(".changed_img" + index).fadeOut(800);
+            index = (index + 1) % 7;
+            $(".changed_img" + index).fadeIn(800);
+            $("#place_name").text(arr[index][0]);
+            $("#place_name").css("color", arr[index][1]);
+            $("#changed_num").text(index + 1);
+        }
+    
+        function previous() {
+            $(".changed_img" + index).fadeOut(800);
+            index = (index <= 0) ? 6 : index - 1;
+            $(".changed_img" + index).fadeIn(800);
+            $("#place_name").text(arr[index][0]);
+            $("#place_name").css("color", arr[index][1]);
+            $("#changed_num").text(index + 1);
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#explore").click(function() {
+                $(".part1_nature").animate({
+                    top: "-60px"
+                }, 170);
+                $(".part1_nature").animate({
+                    top: "0px"
+                }, 170);
+                setTimeout(function() {
+                    $(".part2_history").animate({
+                        top: "-60px"
+                    }, 170);
+                    $(".part2_history").animate({
+                        top: "0px"
+                    }, 170);
+                }, 100);
+                setTimeout(function() {
+                    $(".part3_cafe").animate({
+                        top: "-60px"
+                    }, 170);
+                    $(".part3_cafe").animate({
+                        top: "0px"
+                    }, 170);
+                }, 200);
+                setTimeout(function() {
+                    $(".part4_activity").animate({
+                        top: "-60px"
+                    }, 170);
+                    $(".part4_activity").animate({
+                        top: "0px"
+                    }, 170);
+                }, 300);
+                setTimeout(function() {
+                    $(".part5_play").animate({
+                        top: "-60px"
+                    }, 170);
+                    $(".part5_play").animate({
+                        top: "0px"
+                    }, 170);
+                }, 400);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("nav > a").hover(function() {
+                $(this).find("img").css("filter", "brightness(30%)")
+            }, function() {
+                $(this).find("img").css("filter", "brightness(100%)")
+            });
+        });
+    </script>
+    <script>
+        $.fn.wave = function() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            $this = $(this);
+            setTimeout(function() {
+                $this.css("opacity", "0.5");
+                $this.css("color", "rgba(" + r + "," + g + ", " + b + ")");
+            }, 0);
+            setTimeout(function() {
+                $this.css("opacity", "1");
+                $this.css("color", "rgba(" + r + "," + g + ", " + b + ")");
+            }, 60);
+            setTimeout(function() {
+                $this.css("color", "white");
+            }, 90);
+        }
+        $(document).ready(function() {
+            $("#main_text").click(function() {
+                setTimeout(function() {
+                    $(".main_text1").wave();
+                }, 100);
+                setTimeout(function() {
+                    $(".main_text2").wave();
+                }, 200);
+                setTimeout(function() {
+                    $(".main_text3").wave();
+                }, 300);
+                setTimeout(function() {
+                    $(".main_text4").wave();
+                }, 400);
+                setTimeout(function() {
+                    $(".main_text5").wave();
+                }, 500);
+            });
+            
+        });
+    </script>
+    <body>
+        <main>
+            <span id="place_name">소양강 댐</span>
+            <img class="changed_img0" src="media/소양강1.jpg">
+            <img class="changed_img1" src="media/소양강9.jpg">
+            <img class="changed_img2" src="media/소양강8.jpg">
+            <img class="changed_img3" src="media/소양강3.jpg">
+            <img class="changed_img4" src="media/소양강4.jpg">
+            <img class="changed_img5" src="media/소양강12.jpg">
+            <img class="changed_img6" src="media/소양강10.jpg">
+            <div class="sidebar">
+            </div>
+            <div id="main_text">
+                <span class="main_text1">로</span>
+                <span class="main_text2">맨</span>
+                <span class="main_text3">틱</span>
+                <span class="main_text4">춘</span>
+                <span class="main_text5">천</span>
+            </div>
+            <div id="explore">
+                장소 알아보기
+                <img src="media/화살표.png">
+            </div>
+            <a href="select.html">
+                <div id="go_trip">
+                    여행하러 가기
+                    <img src="media/화살표.png">
+                </div>
+            </a>
+            <div class="left_arrow" onclick="previous()">
+                    <img src="media/left_arrow.png">
+            </div>
+            <div class="right_arrow" onclick="next()">
+                    <img src="media/right_arrow.png">
+            </div>
+            <div class="slide_num">
+                <span id="changed_num">1</span>
+                <span>/</span>
+                <span>7</span>
+            </div>
+        </main>
+        <nav>
+            <a href="1_nami.html">
+                <div class="part1_nature">
+                    <img src="media/분류_자연.jpg">
+                    <span>자연</span>
+                </div>
+            </a>
+            <a href="3_kim_youjeong.html">
+                <div class="part2_history">
+                    <img src="media/분류_역사1.jpg">
+                    <span>역사</span>
+                </div>
+            </a>
+            <a href="5_santorini.html">
+                <div class="part3_cafe">
+                    <img src="media/분류_카페1.jpg">
+                    <span>카페</span>
+                </div>
+            </a>
+            <a href="7_jadegarden.html">
+                <div class="part4_activity">
+                    <img src="media/분류_체험.jpg">
+                    <span>체험</span>
+                </div>
+            </a>
+            <a href="9_legoland.html">
+                <div class="part5_play">
+                    <img src="media/분류_놀이.webp">
+                    <span>놀이</span>
+                </div>
+            </a>
+        </nav>
+    </body>
+</html>
